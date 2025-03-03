@@ -4,3 +4,7 @@
 /ElectronAPP/node_modules
 /WriteAndReadWebsite/backend/node_modules
 /WriteAndReadWebsite/backend/uploads
+/WriteAndReadWebsite/frontendFix/RW/.angular
+/WriteAndReadWebsite/frontendFix/RW/node_modules
+/WriteAndReadWebsite/frontendFix/RW/.vscode
+WriteAndReadWebsite/frontendFix/RW/.editorconfig

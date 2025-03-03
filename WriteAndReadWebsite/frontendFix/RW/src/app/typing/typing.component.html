@@ -1,0 +1,58 @@
+<link href="https://fonts.googleapis.com/css2?family=Recursive&display=swap" rel="stylesheet">
+
+<div class="topleft">
+  <button (click)="goToHome()" class="button">🏠 Home</button>
+</div>
+
+<div class="prompt-box hide-scrollbar typing-mode">
+  <div id="area" class="zindex">
+ </div>
+ <div>{{bookTitle}}</div>
+  <div class="prompt">
+    <section class="prompt-text">
+      <div class="paragraphs center-bottom">
+        <p>
+          <span *ngFor="let char of textArray; let i = index">
+            <span
+              class="letter"
+              [ngClass]="{
+                'ok': isTyped(i),
+                'current': isCurrent(i),
+                'not-typed': !isTyped(i) && !isCurrent(i)
+              }"
+              >{{ char }}</span
+            >
+          </span>
+        </p>
+      </div>
+    </section>
+
+    <textarea
+      class="input-text"
+      autocorrect="off"
+      autocomplete="off"
+      autocapitalize="off"
+      spellcheck="false"
+      (keydown)="onKeyPress($event)"
+    ></textarea>
+  </div>
+</div>
+
+<div class="handleChapters">
+  <button (click)="skipCharacter()" class="zindex button">Skip character</button>
+  <button (click)="previousChapter()" [disabled]="currentChapter === 0" class="zindex button">Previous Chapter</button>
+  <button (click)="nextChapter()" class="zindex button">Next Chapter</button>
+<div>
+
+
+<div class="stat">
+  <h2>Typing Stats</h2>
+  <p><strong>Total Letters Typed:</strong> {{ totalTypedLetters }}</p>
+  <p><strong>Mistyped Letters:</strong> {{ mistypedLetters }}</p>
+  <p><strong>Accuracy:</strong> {{ accuracy.toFixed(2) }}%</p>
+  <p><strong>WPM:</strong> {{ wpm }}</p>
+  <p><strong>Chapters Completed:</strong> {{ currentChapter }}</p>
+</div>
+
+
+

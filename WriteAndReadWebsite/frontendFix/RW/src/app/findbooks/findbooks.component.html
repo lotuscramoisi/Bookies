@@ -1,0 +1,23 @@
+<h2>📚 Your Books</h2>
+
+<div class="topleft">
+  <button (click)="newBook()" class="button">📚 Add a new book</button>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let book of books">
+      <td>{{ book.title }}</td>
+      <td>
+        <button (click)="startTyping(book)" class="button">Start Typing</button>
+        <button (click)="confirmDelete(book.id)" class="button delete">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

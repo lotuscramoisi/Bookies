@@ -1,0 +1,21 @@
+:root {
+    --font-m: 1rem;
+    --font-typing-scale: 1.75;
+    --font-typing-size: 1;
+    --font-typing-rem: calc(var(--font-m) * var(--font-typing-size) * var(--font-typing-scale));
+}
+
+body {
+    font-family: "Recursive", monospace;
+    background-color: #15161e;
+    color: #9aa5ce;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;  
+    align-items: center;  
+    justify-content: center;  
+    overflow: hidden;
+}

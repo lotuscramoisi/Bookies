@@ -1,0 +1,18 @@
+.topleft{
+    position: fixed;
+    top: 1%;
+    left: 1%;
+}
+
+.button {
+    background-color: #4db8ff;
+    color: #15161e;
+    border: 2px solid #4db8ff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-family: var(--font-typing);
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 12px;
+}

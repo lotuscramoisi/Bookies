@@ -1,0 +1,14 @@
+<div class="topleft">
+    <button (click)="goToHome()" class="button">🏠 Home</button>
+</div>
+
+
+<div class="basic">
+    <input type="text" [(ngModel)]="bookTitle" placeholder="Enter book title" class="zindex" />
+</div>
+<div class="basic">
+    <input type="file" (change)="onFileSelected($event)" class="zindex" />
+</div>
+<div class="basic">
+    <button (click)="sendStatsToBackend()" class="button">Upload Book</button>
+</div>
